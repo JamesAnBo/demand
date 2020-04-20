@@ -19,6 +19,15 @@ blacklist mode (NOT RECOMMENDED): accept commands from everybody except people o
 
 There will be a template file created when the player switches to a new job for the first time. It'll look like demands_WHM.lua or related job. I've created a WHM and RDM file already. Use them as a guide to creat other job files.
 
+Some universal commands:
+
+	assistme = will assist (target what the player is currently engaged to
+	attackit = will attack current target /attack
+	shootit = will ranged attack current target /ra <t>
+	leader or plead = passes party lead
+	alead = passes ally lead
+	follow = follows
+
 Other then the full spell name other WHM aliases are:
 
 Self targeting abilities:
@@ -126,12 +135,3 @@ Enemy targeting spells (use assistme first. uses <t>):
 	silence = silence
 	slow = slow
 	addle = addle
-
-Some addition commands:
-
-	assistme = will assist (target what the player is currently engaged to
-	attackit = will attack current target /attack
-	shootit = will ranged attack current target /ra <t>
-	leader or plead = passes party lead
-	alead = passes ally lead
-	follow = follows
