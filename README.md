@@ -128,7 +128,7 @@ Single targeting spells (will be used on the player asking):
 	erase or slowed = erase
 	sac = sacrifice
 	
-Enemy targeting spells (use assistme first. uses /ma spellname <t>):
+Enemy targeting spells (use assistme first):
 
 	dia1, dia2 = dias
 	paralyze = paralyze
