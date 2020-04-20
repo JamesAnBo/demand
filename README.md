@@ -14,6 +14,7 @@ to change modes (default is whitelist mode) type
 	//dm mode blacklist
 
 whitelist mode: only accepts commands from people on your whitelist
+
 blacklist mode (NOT RECOMMENDED): accept commands from everybody except people on your blacklist
 
 There will be a template file created when the player first switches to a job. It'll look like demands_WHM.lua or related job. I've created a WHM and RDM file already. Use them as a guide to creat other job files.
