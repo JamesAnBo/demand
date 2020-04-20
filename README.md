@@ -21,12 +21,12 @@ There will be a template file created when the player switches to a new job for 
 
 Some universal commands:
 
-	assistme = will assist (target what the player is currently engaged to
-	attackit = will attack current target /attack
-	shootit = will ranged attack current target /ra <t>
-	leader or plead = passes party lead
-	alead = passes ally lead
-	follow = follows
+	assistme = will assist player (targets what the player is currently engaged to)
+	attackit = will attack current target using /attack
+	shootit = will ranged attack current target using /ra <t>
+	leader or plead = passes party lead to player
+	alead = passes ally lead to player
+	follow = follows player
 
 Other then the full spell name other WHM aliases are:
 
@@ -52,7 +52,7 @@ Self targeting abilities:
 	mani = manifestation
 	convert = convert
 
-Single targeting abilities:
+Single targeting abilities (will be used on the player asking):
 
 	devo = devotion
 
@@ -90,7 +90,7 @@ Self targeting spells:
 	sra1, sra2, sra3. sra4, sra5 = shellras
 	rr1, rr2, rr3, rr4 = reraises
 
-Single targeting spells:
+Single targeting spells (will be used on the player asking):
 
 	arise = arise
 	r1, r2, r3 = raises
@@ -128,7 +128,7 @@ Single targeting spells:
 	erase or slowed = erase
 	sac = sacrifice
 	
-Enemy targeting spells (use assistme first. uses <t>):
+Enemy targeting spells (use assistme first. uses /ma spellname <t>):
 
 	dia1, dia2 = dias
 	paralyze = paralyze
