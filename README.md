@@ -1,17 +1,17 @@
 to add people to whitelist or blacklist type
 
-//dm wlist add <name>
-//dm blist add <name>
+	//dm wlist add <name>
+	//dm blist add <name>
 
 to remove type
 
-//dm wlist remove <name>
-//dm blist remove <name>
+	//dm wlist remove <name>
+	//dm blist remove <name>
 
 to change modes (default is whitelist mode) type
 
-//dm mode whitelist
-//dm mode blacklist
+	//dm mode whitelist
+	//dm mode blacklist
 
 whitelist mode: only accepts commands from people on your whitelist
 blacklist mode (NOT RECOMMENDED): accept commands from everybody except people on your blacklist
@@ -80,18 +80,6 @@ Self targeting spells:
 	sra1, sra2, sra3. sra4, sra5 = shellras
 	rr1, rr2, rr3, rr4 = reraises
 
-Teleports are turned off but:
-
-	rjugner = recall-Jugner
-	rmeriph = recall-meriph
-	rpashh = recall-pashh
-	taltep = teleport-altep
-	tdem = teleport-dem
-	tholla = teleport-holla
-	tmea = teleport-mea
-	tvahzl = teleport-vahzl
-	tyhoat = teleport-yhoat
-
 Single targeting spells:
 
 	arise = arise
@@ -130,8 +118,6 @@ Single targeting spells:
 	erase or slowed = erase
 	sac = sacrifice
 	
-	
-
 Enemy targeting spells (use assistme first. uses <t>):
 
 	dia1, dia2 = dias
@@ -139,15 +125,6 @@ Enemy targeting spells (use assistme first. uses <t>):
 	silence = silence
 	slow = slow
 	addle = addle
-
-More currently turned off stuff:
-
-	ban1, ban2, ban3 = banishes
-	bang1, bang2 = banishgas
-	dga1 = diaga
-	flash = flash
-	holy = holy
-	holy2 = holy ii
 
 Some addition commands:
 
