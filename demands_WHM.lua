@@ -231,11 +231,41 @@ function getEnemyspells()
 	return enemyspells
 end
 
-function getPartycommands()
-	partycommands = {}
+--weaponskills to use on enemy target /ws "savage blade" sheep
+function getWeaponabilities()
+	weaponabilities = {}
 
-	partycommands["leader"] = "leader"
-	partycommands["plead"] = "leader"
-	
-	return partycommands
-end 
+	--weaponabilities["alias"] = "full name"
+	weaponabilities["hstrike"] = "hexa strike"
+	weaponabilities["bhalo"] = "black halo"
+	weaponabilities["fnov"] = "flash nova"
+
+	return weaponabilities
+end
+
+--custom commands for scripts or input that don't target the player asking.
+function getSelfcustomcommands()
+	selfcustomcommands = {}
+
+	--selfcustomcommands["alias"] = "full name"
+	selfcustomcommands["attackit"] = "input /attack"
+	selfcustomcommands["shootit"] = "input /ra <t>"
+
+	return selfcustomcommands
+end
+
+--custom commands for inputs that target the player asking.
+function getSinglecustomcommands()
+	singlecustomcommands = {}
+
+	--singlecustomcommands["alias"] = "full name"
+	singlecustomcommands["follow"] = "input /follow"
+	singlecustomcommands["assistme"] = "input /assist"
+	singlecustomcommands["inviteme"] = "input /pcmd add"
+	singlecustomcommands["leader"] = "input /pcmd leader"
+	singlecustomcommands["plead"] = "input /pcmd leader"
+	singlecustomcommands["allyme"] = "input /acmd add"
+	singlecustomcommands["alead"] = "input /acmd leader"
+
+	return singlecustomcommands
+end
