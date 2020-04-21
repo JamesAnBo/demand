@@ -1,6 +1,6 @@
 _addon.name = 'Demand'
 _addon.author = 'Aessk'
-_addon.version = '1.5'
+_addon.version = '1.5.1'
 _addon.commands = {'Demand', 'dm'}
 _addon.language = 'english'
 
@@ -53,15 +53,6 @@ end
 
 end
 
-
-selfabilities = getSelfabilities()
-singleabilities = getSingleabilities()
-enemyabilities = getEnemyabilities()
-selfspells = getSelfspells()
-singlespells = getSinglespells()
-enemyspells = getEnemyspells()
-partycommands = getPartycommands()
-
 settings = config.load(defaults)
 
 -- Checking if player is on the list and what they said.
@@ -81,7 +72,18 @@ end)
 
 -- Doing what was demanded.
 function try_acting(message, player)
+
+	selfabilities = getSelfabilities()
+	singleabilities = getSingleabilities()
+	enemyabilities = getEnemyabilities()
+	selfspells = getSelfspells()
+	singlespells = getSinglespells()
+	enemyspells = getEnemyspells()
+	selfcustomcommands = getSelfcustomcommands()
+	singlecustomcommands = getSinglecustomcommands()
+	weaponabilities = getWeaponabilities()
 	lowermessage = string.lower(message)
+	
 	reply =  lookupSpell(selfabilities, lowermessage )
 	if reply ~= nil then
 			windower.send_command('input /ja "'..reply..'" <me>')
@@ -97,7 +99,7 @@ function try_acting(message, player)
 	reply =  lookupSpell(enemyabilities, lowermessage )
 	if reply ~= nil then
 			windower.send_command('input /ja "'..reply..'" <t>')
-			log('Attempting '..reply..' on <t>')
+			log('Attempting '..reply..' on target enemy')
 	        return
 	end
 	reply =  lookupSpell(selfspells, lowermessage )
@@ -115,38 +117,25 @@ function try_acting(message, player)
 	reply =  lookupSpell(enemyspells, lowermessage )
 	if reply ~= nil then
 			windower.send_command('input /ma "'..reply..'" <t>')
-			log('Attemping '..reply..' on <t>')
+			log('Attemping '..reply..' on target enemy')
 	        return
 	end
-	reply =  lookupSpell(partycommands, lowermessage )
+	reply =  lookupSpell(selfcustomcommands, lowermessage )
 	if reply ~= nil then
-			windower.send_command('input /pcmd leader '..player)
-			log('Attempting to pass lead to '..player)
+			windower.send_command(reply)
+			log('Attempting custom command '..player..' requested')
 	        return
 	end
-	if lowermessage == 'assistme' then
-			windower.send_command('input /assist '..player)
-			log('Attempting to assist '..player)
+	reply =  lookupSpell(singlecustomcommands, lowermessage )
+	if reply ~= nil then
+			windower.send_command(reply..' '..player)
+			log('Attempting custom command on '..player)
 	        return
 	end
-	if lowermessage == 'attackit' then
-			windower.send_command('input /attack')
-			log('Attempting to attack target')
-	        return
-	end
-	if lowermessage == 'shootit' then
-			windower.send_command('input /ra <t>')
-			log('Attempting to shoot target')
-	        return
-	end
-	if lowermessage == 'alead' then
-			windower.send_command('input /acmd leader '..player)
-			log('Attempting to pass lead to '..player)
-	        return
-	end
-	if lowermessage == 'follow' then
-			windower.send_command('input /follow '..player)
-			log('Attempting to follow '..player)
+	reply =  lookupSpell(weaponabilities, lowermessage )
+	if reply ~= nil then
+			windower.send_command('input /ws "'..reply.. '" <t>')
+			log('Attemping '..reply..' on target enemy')
 	        return
 	end
   	
