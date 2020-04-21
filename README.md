@@ -1,3 +1,5 @@
+WARNING: Spamming your chatlog with commands could be seen as suspecious activity. This addon is not intended for fully controlling another character. It was intnded for the occasional ~na spell, cure, buff and such. USE AT YOUR OWN DISCRETION! 
+
 to add people to whitelist or blacklist type
 
 	//dm wlist add <name>
